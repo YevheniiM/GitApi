@@ -1,7 +1,7 @@
 from abc import abstractmethod, ABC
 from typing import List
 
-from app.models import Repository
+from src.app.models import Repository
 
 
 class RepositorySerializer(ABC):
@@ -41,7 +41,7 @@ class GithubSerializer(RepositorySerializer):
         "ssh_url": "ssh_url",
         "http_url": "html_url",
         "created_at": "created_at",
-        "updated_at": "updated_at"
+        "updated_at": "updated_at",
     }
 
 
@@ -56,5 +56,5 @@ class GitlabSerializer(RepositorySerializer):
         "ssh_url": "ssh_url_to_repo",
         "http_url": "http_url_to_repo",
         "created_at": "created_at",
-        "updated_at": "last_activity_at"
+        "updated_at": "last_activity_at",
     }

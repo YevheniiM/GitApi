@@ -5,6 +5,7 @@ from pydantic import BaseModel
 
 class Repository(BaseModel):
     """The class represents the Repository data object."""
+
     name: str
     full_name: str
     description: Optional[str]

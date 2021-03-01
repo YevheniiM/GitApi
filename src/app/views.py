@@ -2,9 +2,9 @@ import aiohttp
 from aiohttp import web
 from aiohttp.web_response import Response
 
-from app.helpers.serialization import GithubSerializer, GitlabSerializer
-from app.helpers.client import GithubClient, GitlabClient
-from app.helpers.query_parser import GitlabQueryParser, GithubQueryParser
+from src.app.helpers.serialization import GithubSerializer, GitlabSerializer
+from src.app.helpers.client import GithubClient, GitlabClient
+from src.app.helpers.query_parser import GitlabQueryParser, GithubQueryParser
 
 PLATFORMS = {
     "github": (GithubClient, GithubQueryParser, GithubSerializer),
@@ -21,7 +21,9 @@ async def search_repositories(request):
     try:
         client, parser, serializer = PLATFORMS.get(request_query.get("platform"))
     except TypeError:
-        return get_error_response(f"{request_query.get('platform')} platform is not supported", 404)
+        return get_error_response(
+            f"{request_query.get('platform')} platform is not supported", 404
+        )
 
     try:
         search_query = parser.parse(request_query)

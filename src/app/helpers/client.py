@@ -1,11 +1,10 @@
 from abc import abstractmethod
 
-import aiohttp
 from aiohttp import ClientSession
 
-from app.helpers.exceptions import ApiError
-from app.helpers.serialization import GitlabSerializer, GithubSerializer
-from app.settings import config
+from src.app.helpers.exceptions import ApiError
+from src.app.helpers.serialization import GitlabSerializer, GithubSerializer
+from src.app.settings import config
 
 
 class GitClient:

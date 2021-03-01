@@ -2,10 +2,14 @@ from copy import deepcopy
 
 import pytest
 
-from app.helpers.serialization import GitlabSerializer, GithubSerializer
-from app.models import Repository
-from tests.helpers.constants import VALID_REQUEST_DATA_GITLAB, VALID_REQUEST_DATA_GITHUB, VALID_RESPONSE_DATA_GITHUB, \
-    VALID_RESPONSE_DATA_GITLAB
+from src.app.helpers.serialization import GitlabSerializer, GithubSerializer
+from src.app.models import Repository
+from src.tests.helpers.constants import (
+    VALID_REQUEST_DATA_GITLAB,
+    VALID_REQUEST_DATA_GITHUB,
+    VALID_RESPONSE_DATA_GITHUB,
+    VALID_RESPONSE_DATA_GITLAB,
+)
 
 
 def test_success_serialization_gitlab():
