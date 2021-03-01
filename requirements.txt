@@ -13,6 +13,7 @@ flake8==3.8.4
 idna==3.1
 idna-ssl==1.1.0
 iniconfig==1.1.1
+isort==5.7.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
 mccabe==0.6.1

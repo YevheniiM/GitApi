@@ -8,6 +8,7 @@ COPY ./src/ /data/src/
 
 RUN python -m pytest /data/src/tests
 RUN flake8 --ignore E501 ./data/src
+RUN isort ./data/src
 
 ENV PYTHONPATH=/data/
 
