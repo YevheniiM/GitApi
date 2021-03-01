@@ -8,9 +8,11 @@ class RepositorySerializer(ABC):
     @property
     @abstractmethod
     def mapper(self) -> dict:
-        """Return the dict object with mapping between the
+        """
+        Return the dict object with mapping between the
         generalized Repository fields and the actual fields returned
-        by the actual API."""
+        by the actual API.
+        """
         pass
 
     def serialize(self, api_data: List[dict]) -> List[Repository]:
