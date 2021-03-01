@@ -1,9 +1,6 @@
-import asyncio
-
 from aiohttp import web
 
-from settings import config
-from serialization import GithubSerializer, GitlabSerializer
+from helpers.serialization import GithubSerializer, GitlabSerializer
 from helpers.client import GithubClient, GitlabClient
 from helpers.query_parser import GitlabQueryParser, GithubQueryParser
 

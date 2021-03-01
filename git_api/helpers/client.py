@@ -1,6 +1,6 @@
 import aiohttp
 
-from serialization import GitlabSerializer, GithubSerializer
+from helpers.serialization import GitlabSerializer, GithubSerializer
 from settings import config
 
 
