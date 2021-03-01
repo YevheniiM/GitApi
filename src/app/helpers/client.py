@@ -3,9 +3,9 @@ from typing import List
 
 from aiohttp import ClientSession
 
-from src.app.models import Repository
 from src.app.helpers.exceptions import ApiError
-from src.app.helpers.serialization import GitlabSerializer, GithubSerializer
+from src.app.helpers.serialization import GithubSerializer, GitlabSerializer
+from src.app.models import Repository
 from src.app.settings import config
 
 

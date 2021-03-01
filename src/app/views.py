@@ -2,9 +2,9 @@ import aiohttp
 from aiohttp import web
 from aiohttp.web_response import Response
 
-from src.app.helpers.serialization import GithubSerializer, GitlabSerializer
 from src.app.helpers.client import GithubClientBase, GitlabClientBase
-from src.app.helpers.query_parser import GitlabQueryParser, GithubQueryParser
+from src.app.helpers.query_parser import GithubQueryParser, GitlabQueryParser
+from src.app.helpers.serialization import GithubSerializer, GitlabSerializer
 
 # to add a new supported platform, you just need need to write custom
 # Client, QueryParser and Serializer.
