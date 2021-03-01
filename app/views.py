@@ -1,3 +1,4 @@
+import aiohttp
 from aiohttp import web
 from aiohttp.web_response import Response
 
@@ -27,6 +28,7 @@ async def search_repositories(request):
     except KeyError:
         return get_error_response("The request query is incorrect", 404)
 
-    data = await client().search(search_query)
+    async with aiohttp.ClientSession() as session:
+        data = await client().search(search_query, session)
 
     return web.json_response(serializer().deserialize(data))
