@@ -1,7 +1,7 @@
 from abc import abstractmethod, ABC
 from typing import List
 
-from models import Repository
+from app.models import Repository
 
 
 class RepositorySerializer(ABC):

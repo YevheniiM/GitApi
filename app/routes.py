@@ -1,4 +1,4 @@
-from views import search_repositories
+from .views import search_repositories
 
 
 def setup_routes(app):

@@ -8,7 +8,6 @@ class Repository(BaseModel):
     name: str
     full_name: str
     description: Optional[str]
-    avatar_url: Optional[str]
     forks_count: int
     stars_count: int
     default_branch: Optional[str]
