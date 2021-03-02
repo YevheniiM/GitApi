@@ -77,6 +77,7 @@ logic of views and without adding new url patterns. For example, to add a Bitbuc
     }
 ```
 
+This mapper helps to get the unified response across all the platforms.
 All the logic is written in the base class, where all the actual mapping between those fields is performed, so no
 worries about that.
 
