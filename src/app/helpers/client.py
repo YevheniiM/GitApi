@@ -33,7 +33,7 @@ class GitClientBase:
         return True
 
 
-class GithubClientBase(GitClientBase):
+class GithubClient(GitClientBase):
     """The client class for Github integration."""
 
     def __init__(self):
@@ -47,7 +47,7 @@ class GithubClientBase(GitClientBase):
                 return GithubSerializer().serialize(resp["items"])
 
 
-class GitlabClientBase(GitClientBase):
+class GitlabClient(GitClientBase):
     """The client class for Gitlab integration."""
 
     def __init__(self):

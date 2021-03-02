@@ -2,7 +2,7 @@ import aiohttp
 from aiohttp import web
 from aiohttp.web_response import Response
 
-from src.app.helpers.client import GithubClientBase, GitlabClientBase
+from src.app.helpers.client import GithubClient, GitlabClient
 from src.app.helpers.query_parser import GithubQueryParser, GitlabQueryParser
 from src.app.helpers.serialization import GithubSerializer, GitlabSerializer
 
@@ -10,8 +10,8 @@ from src.app.helpers.serialization import GithubSerializer, GitlabSerializer
 # Client, QueryParser and Serializer.
 # the logic of an app should not be changed.
 PLATFORMS = {
-    "github": (GithubClientBase, GithubQueryParser, GithubSerializer),
-    "gitlab": (GitlabClientBase, GitlabQueryParser, GitlabSerializer),
+    "github": (GithubClient, GithubQueryParser, GithubSerializer),
+    "gitlab": (GitlabClient, GitlabQueryParser, GitlabSerializer),
 }
 
 
