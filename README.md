@@ -1,7 +1,9 @@
 # GitApi
 
-A mini API that functions as a layer between an application and several integrations (Gitlab, Github) and allows
-searching for repositories.
+### A mini API that functions as a layer between an application and several integrations (Gitlab, Github) and allows searching for repositories.
+
+###### [aiohttp](https://docs.aiohttp.org/en/stable/) - asynchronous HTTP Client/Server was used.
+
 ---
 
 ## Run the project
@@ -75,28 +77,26 @@ logic of views and without adding new url patterns. For example, to add a Bitbuc
     }
 ```
 
-All the logic is written in the base class, where all the actual mapping between
-those fields is performed, so no worries about that.
+All the logic is written in the base class, where all the actual mapping between those fields is performed, so no
+worries about that.
 
 ---
 The pros of such an approach are obvious:
+
 1. The code is scalable.
-2. No need to copy-paste views when some new platform are added (all the logic
-   is written in one view).
-3. The request query is unified. So, no matter which platform you're using
-underneath, your request query remains the same. It's then parsed in the QueryParser
-object independently for each platform.
+2. No need to copy-paste views when some new platform are added (all the logic is written in one view).
+3. The request query is unified. So, no matter which platform you're using underneath, your request query remains the
+   same. It's then parsed in the QueryParser object independently for each platform.
 4. Adding new query parameters is also pretty easy.
 
 The cons are also here:
-1. Lots of abstractions. For such a small task there was really no need to use those
-abstractions and just a one view. The project got pretty big because of them. But 
-they were added because of the potential of future scalability.
-2. There is only one query parameter `name` in the API. That is because of the lack 
-of my time. It's not a big problem to add a several ones with this kind of architecture.
-3. I was focused on separating the platforms and working with them independently. That's 
-why there is no possibility to get some merged results from them (it's not a problem 
-to add if I had more time).
+
+1. Lots of abstractions. For such a small task there was really no need to use those abstractions and just a one view.
+   The project got pretty big because of them. But they were added because of the potential of future scalability.
+2. There is only one query parameter `name` in the API. That is because of the lack of my time. It's not a big problem
+   to add a several ones with this kind of architecture.
+3. I was focused on separating the platforms and working with them independently. That's why there is no possibility to
+   get some merged results from them (it's not a problem to add if I had more time).
 4. Tests are pretty incomplete because of lack of time.
 5. Docs also could be better :)
    
